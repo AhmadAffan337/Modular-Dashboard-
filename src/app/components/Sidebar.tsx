@@ -50,7 +50,7 @@ const Sidebar: React.FC = () => {
 
           <div className="mt-8">
             <Card
-              className="bg-emerald-600 w-44 mt-8"
+              className="bg-emerald-600 w-44 mt-10 mb-10"
               description="Hello! Subscribe to our new offer for special deals and discounts."
             >
               <Button
