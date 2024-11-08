@@ -46,7 +46,7 @@ const BarChart = () => {
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: "top" as const, // Setting position directly with `as const` to satisfy TypeScript
+        position: "top" as const,
         labels: {
           font: {
             size: 10,

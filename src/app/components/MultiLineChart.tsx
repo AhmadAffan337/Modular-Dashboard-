@@ -52,7 +52,7 @@ const BarChart = () => {
         font: {
           size: 14,
           family: "Arial",
-          weight: "normal" as const, // Use `as const` to explicitly cast the font weight
+          weight: "normal" as const,
         },
         align: "center" as const,
         padding: {

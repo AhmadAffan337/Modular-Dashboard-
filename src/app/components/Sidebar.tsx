@@ -21,7 +21,7 @@ const Sidebar: React.FC = () => {
       </button>
 
       <aside
-        className={`fixed sm:relative z-10 sm:z-auto sm:block bg-white shadow-lg p-4 transition-transform transform ${
+        className={`fixed sm:relative z-10 sm:z-auto sm:block bg-white shadow-lg p-6 transition-transform transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } sm:translate-x-0 w-64 min-h-screen`}
       >
@@ -31,8 +31,7 @@ const Sidebar: React.FC = () => {
         <span className="text-sm font-semibold font-roboto text-gray-400 block mt-1 mb-6 ml-6">
           Current Admin
         </span>
-
-        <div className="space-y-5 ml-6">
+        <div className="ml-6 space-y-6 sm:space-y-4 overflow-y-auto sm:overflow-visible max-h-[calc(100vh-200px)] sm:max-h-full">
           <div className="flex items-center bg-emerald-200 p-3 rounded-md w-40 space-x-4">
             <Home className="text-emerald-500" />
             <span className="text-sm font-roboto font-bold text-emerald-500">
@@ -40,17 +39,19 @@ const Sidebar: React.FC = () => {
             </span>
           </div>
 
-          {SideBarItems.map((e: any) => (
-            <li key={e.id} className="flex items-center space-x-4">
-              <e.icon className="text-gray-700" />
-              <span className="text-sm font-roboto ">{e.name}</span>
-            </li>
-          ))}
+          <ul className="space-y-4">
+            {SideBarItems.map((e: any) => (
+              <li key={e.id} className="flex items-center space-x-4">
+                <e.icon className="text-gray-700" />
+                <span className="text-sm font-roboto">{e.name}</span>
+              </li>
+            ))}
+          </ul>
 
-          <div className="mt-12">
+          <div className="mt-8">
             <Card
-              className="bg-emerald-600 w-44 mt-12"
-              description="Hello! subscribe to our new offer for special deals and discounts."
+              className="bg-emerald-600 w-44 mt-8"
+              description="Hello! Subscribe to our new offer for special deals and discounts."
             >
               <Button
                 title="Subscribe"
